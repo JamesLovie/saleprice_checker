@@ -5,9 +5,8 @@ Created a lambda function to run daily and send a text message when the price of
 
 1. Created a lambda function with basic permissions.
 2. Inserted python code from Github.
-3. Included json library, passed in event and handler objects and a “send 200” upon successfully running the main() function. This will populate Cloudwatch Logs.
-4. Add environment variable for my phone number to send SMS.
-5. Created a virtual environment on local machine, installed custom libraries, zip’d up folder and uploaded to lambda.
-6. Zip contents of virtual environment installed libraries (zip -r9 saleprice_checker.zip *)
-7. Attached SNS Full Access policy to lambda function to allow the function to access SNS to send a message.
-8. Created a scheduled rule in Cloudwatch to trigger lambda function every day.
+3. Included json library, inserted all code under lambda handler function.
+4. Add environment variable for my phone number to send SMS, including item price to check against and the target url.
+5. Created a virtual environment on local machine, installed custom libraries, zip contents of virtual environment installed libraries  and uploaded zip file to lambda (zip -r9 saleprice_checker.zip *).
+6. Attached SNS Full Access policy to lambda function to allow the function to access SNS to send a message.
+7. Created a scheduled rule in Cloudwatch to trigger lambda function every day.
