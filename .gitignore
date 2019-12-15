@@ -1,3 +1,6 @@
 .DS_Store
 slack_api_constants.py
 slack_api_constants.pyc
+**/lib
+**/include
+**/bin
