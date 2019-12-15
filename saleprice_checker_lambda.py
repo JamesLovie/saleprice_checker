@@ -25,11 +25,19 @@ def lambda_handler(event, context):
     int(postPrice)
     if postPrice == itemprice:
         print('No price change')
+        return {
+        'statusCode': 200,
+        'body': json.dumps('Code ran sucessfully, no price changes.')
+    }
     elif postPrice < itemprice:
         sns.publish(PhoneNumber=number, Message='Price has decreased!')
+        return {
+        'statusCode': 200,
+        'body': json.dumps('Code ran sucessfully, price has decreased.')
+    }
     elif postPrice > itemprice:
         sns.publish(PhoneNumber=number, Message='Price has increased!')
-    return {
+        return {
         'statusCode': 200,
-        'body': json.dumps('Code ran sucessfully.')
+        'body': json.dumps('Code ran sucessfully, price has increased.')
     }
